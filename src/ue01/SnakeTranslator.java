@@ -1,3 +1,5 @@
+package ue01;
+
 public class SnakeTranslator {
     public static String Translate(String input) {
         StringBuilder modifiedStr = new StringBuilder();

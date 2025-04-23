@@ -1,0 +1,11 @@
+What is the static type of m1? What is its dynamic type?
+Static type is Message, dynamic type is Email.
+
+Which method is called? Why?
+The method from the dynamic type is called, because is one is saved in heap.
+
+Why can’t send() be called directly?
+Because send() is not in the static type Message, so Compiler is not sure that this method exists.
+
+How could you safely call send() anyway (e.g. instanceof)?
+Downcast or use instanceof, see A2_Main.java.

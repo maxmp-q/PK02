@@ -12,6 +12,7 @@ public class Account {
         this.pin = 4711;
         this.internalNode = "test2";
     }
+
     public void changePin(int oldPin, int newPin) {
         if(oldPin == this.pin){
             this.pin = newPin;

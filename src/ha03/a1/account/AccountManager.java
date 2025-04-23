@@ -24,5 +24,8 @@ public class AccountManager {
         //works, because is same package
         //suggest to change into private and make a getter and a setter
         System.out.println(getInternalNode);
+
+        account.changePin(4711, 1111);
+        System.out.println(account.pin);
     }
 }

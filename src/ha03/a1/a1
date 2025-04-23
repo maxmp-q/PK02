@@ -1,3 +1,4 @@
-The difference between protected and private with getter is.
-
-//not ready
+The difference between protected and private with getter is that
+a private attribute is safer, because protected attributes can be
+directly assessed via reference and not with a getter/setter.
+Encapsulation makes the code more safe.

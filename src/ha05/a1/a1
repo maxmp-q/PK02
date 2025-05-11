@@ -1,0 +1,7 @@
+1) done
+2) My Code is an example for dependency injection,
+ because we have to init two other class instances to init a costumer.
+3) My Code is breaking the law of demeter, because there are to much dependencies.
+   We need to creat two other class instances to init a costumer. To fix this problem,
+   we can delete a Profile, because it only has one attribute(a shippingInfo).
+   Solution see code.

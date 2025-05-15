@@ -1,0 +1,6 @@
+b)
+In this case exception handling in divide makes more sense, because divide might be a very much used
+function. So we have less code.
+c)
+When the function is used only once, then it makes more sense to handle the exception where the
+function is used.

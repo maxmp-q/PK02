@@ -1,5 +1,7 @@
 package ha05.a1;
 
+import ha05.a2.InvalidCustomerException;
+
 public class Customer {
     private Profile profile;
     private int id;
@@ -8,7 +10,11 @@ public class Customer {
     private ShippingInfo shippingInfo;
     private int id2;
 
+    //Here are solutions for a2
     public Customer(Profile profile, int id) {
+        if(profile == null || id < 0){
+            throw new InvalidCustomerException("Profile is missing or id is negative");
+        }
         this.profile = profile;
         this.id = id;
     }

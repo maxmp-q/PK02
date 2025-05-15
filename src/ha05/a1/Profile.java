@@ -1,9 +1,14 @@
 package ha05.a1;
 
+import ha05.a2.MissingShippingInfoException;
+
 public class Profile {
     private ShippingInfo shippingInfo;
 
-    public Profile(ShippingInfo shippingInfo) {
+    public Profile(ShippingInfo shippingInfo) throws MissingShippingInfoException {
+        if(shippingInfo == null){
+            throw new MissingShippingInfoException("ShippingInfo is missing");
+        }
         this.shippingInfo = shippingInfo;
     }
 

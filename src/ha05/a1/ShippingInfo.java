@@ -1,11 +1,20 @@
 package ha05.a1;
 
+import ha05.a2.InvalidShippingInfoException;
+
 public class ShippingInfo {
     private String city;
     private int zipcode;
     private String country;
 
-    public ShippingInfo(String city, int zipcode, String country) {
+    public ShippingInfo(String city, int zipcode, String country) throws InvalidShippingInfoException {
+        if(city == null || city.isEmpty()){
+            throw new InvalidShippingInfoException("City is null or empty");
+        }
+
+        if(zipcode < 0){
+            throw new InvalidShippingInfoException("Zipcode is negative");
+        }
         this.city = city;
         this.zipcode = zipcode;
         this.country = country;

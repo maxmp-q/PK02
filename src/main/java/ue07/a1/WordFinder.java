@@ -13,7 +13,7 @@ public class WordFinder {
         ArrayList<String> words = new ArrayList<>();
         ArrayList<String> allWords = new ArrayList<>();
         Random rand = new Random();
-        String file = "words.txt";
+        String file = "./src/main/java/ue07/a1/words.txt";
 
         try(BufferedReader br = new BufferedReader(new FileReader(file))){
 //          BufferedWriter bw = new BufferedWriter(new FileWriter("words.txt", false));
@@ -35,7 +35,7 @@ public class WordFinder {
 
             words.remove(selectedWord);
 
-            BufferedWriter bw = new BufferedWriter(new FileWriter("words.txt", false));
+            BufferedWriter bw = new BufferedWriter(new FileWriter(file, false));
 
             for( String word : allWords){
                 bw.write(word);

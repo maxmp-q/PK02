@@ -1,0 +1,8 @@
+1)
+Use of wildcard, because otherwise the compiler wouldn't recognize a Collection with a subtype
+of Shape suitable for the given parameter.
+2)
+Here we need to write a List so we are using <T extends Shape>, because wildcards are better
+for readonly utilities.
+3)
+We dont need to create a instance of a the class first to use the utilities.

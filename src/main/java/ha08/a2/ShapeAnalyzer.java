@@ -23,6 +23,7 @@ public class ShapeAnalyzer {
     public static Shape findShapeWithMaxArea(
             Collection<? extends Shape> shapes
     ) {
+        if(shapes == null || shapes.isEmpty()) return null;
         Shape result = null;
 
         for(Shape shape : shapes) {

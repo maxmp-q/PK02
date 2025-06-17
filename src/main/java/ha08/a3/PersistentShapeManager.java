@@ -3,9 +3,6 @@ package ha08.a3;
 import ha08.a1.Shape;
 
 import java.io.*;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -27,9 +24,9 @@ public class PersistentShapeManager {
 
         try(FileReader fr = new FileReader(filename)){
             BufferedReader br = new BufferedReader(fr);
+            String line;
 
-            while(br.readLine() != null){
-                String line = br.readLine();
+            while((line = br.readLine()) != null){
                 shapes.add(ShapeFactory.fromString(line));
             }
         } catch(Exception e){
@@ -39,7 +36,7 @@ public class PersistentShapeManager {
     }
 
     public static void clearFile(String filename){
-        try(BufferedWriter bw = Files.newBufferedWriter(Path.of(filename), StandardOpenOption.TRUNCATE_EXISTING)) {
+        try(BufferedWriter bw = new BufferedWriter(new FileWriter(filename))) {
         } catch (Exception e) {
             e.printStackTrace();
         }

@@ -16,6 +16,8 @@ class Node:
             else:
                 self._left.add(val)
 
+    #TODO: Add get and remove
+
     def print_in_order(self):
         if self._left:
             self._left.print_in_order()

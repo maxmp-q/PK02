@@ -10,15 +10,7 @@ class Mail:
         self._read = read
 
     def printMail(self):
-        return(
-            self._subject +
-            " from " +
-            self._senders_address +
-            " on " +
-            self._datetime +
-            ": " +
-            self._message
-        )
+        return(f"{self._subject} from {self._senders_address} on {self._datetime}: self._message")
 
     def is_read(self):
         return self._read
